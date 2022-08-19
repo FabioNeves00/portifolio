@@ -40,10 +40,9 @@ export const Techs = () => {
 
     return array
   }
-
   return (
     <div id="tech" className="grid grid-cols-1 grid-rows-2 gap-12">
-      <div className="flex">
+      <div className="flex gap-12">
         {generateLogos().map((logo) => {
           return (
           <img src={logo} alt="" className="w-20 rotate-45 opacity-20" />

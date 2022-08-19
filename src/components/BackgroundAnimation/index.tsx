@@ -1,6 +1,6 @@
 export const BackgroundAnimation = () => (
     <svg
-      className="BgAnimation__svg w-[48rem] invert dark:invert-0 "
+      className="BgAnimation__svg w-[38rem] invert dark:invert-0 "
       viewBox="0 0 602 602"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
