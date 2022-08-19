@@ -1,7 +1,6 @@
-import React from 'react'
-
 export const Projects = () => {
   return (
-    <div>Projects</div>
+     <main className="flex flex-col gap-2  mt-12 w-full h-fit pb-12 ">
+    </main>
   )
 }
