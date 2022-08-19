@@ -1,0 +1,11 @@
+@tailwind components;
+
+@layer components {
+  .title {
+    @apply md:text-6xl md:w-[25ch] text-4xl text-brand-light-black dark:text-brand-white font-bold
+  }
+  
+  .subtitle {
+    @apply md:text-xl md:w-[80ch] text-lg text-brand-light-black dark:text-brand-light-gray 
+  }
+}
