@@ -1,4 +1,4 @@
-import { About, Hero, SectionDivider, Techs } from "../components";
+import { About, Hero, Projects, SectionDivider, Techs } from "../components";
 
 export const HomePage = () => {
   
@@ -12,7 +12,7 @@ export const HomePage = () => {
       {/* <SectionDivider /> */}
       <About />
       <SectionDivider />
-      {/* PROJECTS */}
+      <Projects />
       {/* CONTACT */}
     </div>
   );
