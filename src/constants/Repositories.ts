@@ -1,14 +1,3 @@
-type Repository = {
-  title: string;
-  source: string;
-  link?: string;
-  descriptionPT: string;
-  descriptionEN: string;
-  image?: string;
-  stack: string[];
-  type: "Front-end" | "Back-end" | "Fullstack";
-};
-
 export const BASE_PERSONAL_GITHUB_LINK = "https://github.com/FabioNeves00/";
 export const BASE_LINKEDIN_LINK = "https://www.linkedin.com/in/fabio-neves-55b2831b5/";
 export const BASE_PANELINHA_GITHUB_LINK = "https://github.com/Little-Panela/";
