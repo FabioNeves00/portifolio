@@ -32,11 +32,16 @@ const tech_logos = [
 
 import styles from "./style.module.css"
 
+
 export const Techs = () => {
-  
+  const widthScreenUser = window.screen.width;
+  console.log(widthScreenUser);
+
   const generateLogos = () => {
     const array = []
-    for (let i = 0; i < 50; i++) {
+
+    // if (widthScreenUser >= 1920)
+    for (let i = 0; i < 100; i++) {
       array.push(tech_logos[Math.floor(Math.random() * (tech_logos.length - 0) + 0)])
     }
 
@@ -44,11 +49,27 @@ export const Techs = () => {
   }
   return (
     <div id="tech" className={styles.container}>
+      <div id={styles.logoTechs} className="flex gap-12" >
         {generateLogos().map((logo) => {
           return (
           <img src={logo} alt="" className="w-20 rotate-45 opacity-20" />
           )
         })}
+      </div>
+      <div id={styles.logoTechs2} className="flex gap-12">
+        {generateLogos().map((logo) => {
+          return (
+          <img src={logo} alt="" className="w-20 rotate-45 opacity-20" />
+          )
+        })}
+      </div>
+      <div id={styles.logoTechs3} className="flex gap-12">
+        {generateLogos().map((logo) => {
+          return (
+          <img src={logo} alt="" className="w-20 rotate-45 opacity-20" />
+          )
+        })}
+      </div>
     </div>
   );
 };
