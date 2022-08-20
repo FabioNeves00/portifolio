@@ -32,15 +32,11 @@ const tech_logos = [
 
 import styles from "./style.module.css"
 
-
 export const Techs = () => {
-  const widthScreenUser = window.screen.width;
-  console.log(widthScreenUser);
 
   const generateLogos = () => {
     const array = []
 
-    // if (widthScreenUser >= 1920)
     for (let i = 0; i < 100; i++) {
       array.push(tech_logos[Math.floor(Math.random() * (tech_logos.length - 0) + 0)])
     }
