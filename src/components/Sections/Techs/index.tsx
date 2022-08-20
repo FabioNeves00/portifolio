@@ -30,46 +30,25 @@ const tech_logos = [
   dockerLogo,
 ];
 
+import styles from "./style.module.css"
+
 export const Techs = () => {
   
   const generateLogos = () => {
     const array = []
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < 50; i++) {
       array.push(tech_logos[Math.floor(Math.random() * (tech_logos.length - 0) + 0)])
     }
 
     return array
   }
   return (
-    <div id="tech" className="grid grid-cols-1 grid-rows-2 gap-12">
-      <div className="flex gap-12">
+    <div id="tech" className={styles.container}>
         {generateLogos().map((logo) => {
           return (
           <img src={logo} alt="" className="w-20 rotate-45 opacity-20" />
           )
         })}
-      </div>
-      <div className="flex">
-        {generateLogos().map((logo) => {
-          return (
-          <img src={logo} alt="" className="w-20 rotate-45 opacity-20" />
-          )
-        })}
-      </div>
-      <div className="flex">
-        {generateLogos().map((logo) => {
-          return (
-          <img src={logo} alt="" className="w-20 rotate-45 opacity-20" />
-          )
-        })}
-      </div>
-      <div className="flex">
-        {generateLogos().map((logo) => {
-          return (
-          <img src={logo} alt="" className="w-20 rotate-45 opacity-20" />
-          )
-        })}
-      </div>
     </div>
   );
 };
