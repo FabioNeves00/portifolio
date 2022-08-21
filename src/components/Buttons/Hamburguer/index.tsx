@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { HamburguerMenuContext } from "../../../contexts";
+import { MobileNavBarContext } from "../../../contexts";
 
 export const Hamburguer = () => {
-  const {menuState, setMenuState} = useContext(HamburguerMenuContext)
+  const {menuState, setMenuState} = useContext(MobileNavBarContext)
 
   return (
     <div className="flex items-center justify-end w-full">

@@ -1,13 +1,13 @@
-import { HamburguerMenuContextProvider } from "./HamburguerMenuContext";
+import { MobileNavBarContextProvider } from "./MobileNavBarContext";
 import { LanguageContextProvider } from "./LanguageContext";
 import { ThemeContextProvider } from "./ThemeContext";
 
 export const GlobalContext = ({ children }: any) => {
   return (
-    <HamburguerMenuContextProvider>
+    <MobileNavBarContextProvider>
       <ThemeContextProvider>
         <LanguageContextProvider>{children}</LanguageContextProvider>
       </ThemeContextProvider>
-    </HamburguerMenuContextProvider>
+    </MobileNavBarContextProvider>
   );
 };

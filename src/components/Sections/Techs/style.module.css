@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  width: 100vw;
+  max-height: 311px;
+  margin-top: 50px;
+  gap: 30px;
+}
+
+#logoTechs {
+  background: transparent;
+  animation: animLogoTechs 50s linear infinite;
+}
+
+#logoTechs:after {
+  content: " ";
+  position: absolute;
+  right: 2000px;
+}
+
+#logoTechs2 {
+  animation: animLogoTechs 100s linear infinite;
+}
+
+#logoTechs2:after {
+  content: " ";
+  position: absolute;
+  right: 2000px;
+}
+
+#logoTechs3 {
+  animation: animLogoTechs 150s linear infinite;
+}
+
+#logoTechs3:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+}
+
+@keyframes animLogoTechs {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateX(2000px);
+  }
+}

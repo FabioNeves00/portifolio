@@ -1,13 +1,4 @@
-type Repository = {
-  title: string;
-  source: string;
-  link?: string;
-  descriptionPT: string;
-  descriptionEN: string;
-  image?: string;
-  stack: string[];
-  type: "Front-end" | "Back-end" | "Fullstack";
-};
+import { Repository } from "../@types";
 
 export const BASE_PERSONAL_GITHUB_LINK = "https://github.com/FabioNeves00/";
 export const BASE_LINKEDIN_LINK = "https://www.linkedin.com/in/fabio-neves-55b2831b5/";
@@ -24,7 +15,7 @@ export const REPOSITORIES: Repository[] = [
       "Website for notes for studies, based on the learning process by cards",
     stack: ["NextJS", "Typescript", "MongoDB", "Tailwind"],
     type: "Fullstack",
-    image: "./StudyNotesBanner.svg",
+    image: "./banners/StudyNotesBanner.svg",
   },
   {
     title: "FroggyChat",
@@ -34,7 +25,7 @@ export const REPOSITORIES: Repository[] = [
     stack: ["ReactJS", "Javascript", "SocketIO", "ExpressJS"],
     link: "https://froggychats2.netlify.app/",
     type: "Fullstack",
-    image: "./FroggyChatBanner.png",
+    image: "./banners/FroggyChatBanner.png",
   },
   {
     title: "CalcResistance",
@@ -45,7 +36,7 @@ export const REPOSITORIES: Repository[] = [
       "Website for calculating resistor resistance using various methods.",
     stack: ["HTML", "Javascript", "CSS", "Electron"],
     type: "Fullstack",
-    image: "./CalcResistanceBanner.png",
+    image: "./banners/CalcResistanceBanner.png",
     link: "https://fabioneves00.github.io/Resistores/",
   },
   {
@@ -57,7 +48,7 @@ export const REPOSITORIES: Repository[] = [
       "Denver is a website designed for parents of children with autism to learn how to care for their children, and help them understand how they think.",
     stack: ["VueJS", "NodeJS", "ExpressJS", "JWT", "Squelize"],
     type: "Front-end",
-    image: "./LogoGeta.png",
+    image: "./banners/LogoGeta.png",
   },
   {
     title: "PanelinhaCLI",
@@ -68,7 +59,7 @@ export const REPOSITORIES: Repository[] = [
       'A cli for the members of the "Panelinha" organization to create their projects in a standardized way.',
     stack: ["Typescript", "NodeJS"],
     type: "Back-end",
-    image: "./LogoPanelinha.png",
+    image: "./banners/LogoPanelinha.png",
   },
   {
     title: "AutoDrops",
@@ -80,7 +71,7 @@ export const REPOSITORIES: Repository[] = [
     stack: ["C"],
     type: "Back-end",
     link: "https://github.com/Little-Panela/AutoDrops/blob/master/README.md",
-    image: "./LogoAutoDrops.png",
+    image: "./banners/LogoAutoDrops.png",
   },
   {
     title: "PI-Plataform",
@@ -100,6 +91,6 @@ export const REPOSITORIES: Repository[] = [
     ],
     type: "Fullstack",
     link: "https://pi.omnicesupa.com/",
-    image: "./PIPlataformBanner.png",
+    image: "./banners/PIPlataformBanner.png",
   },
 ];
