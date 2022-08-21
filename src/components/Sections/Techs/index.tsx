@@ -47,24 +47,24 @@ export const Techs = () => {
   return (
     <main id="techs" className="h-screen">
       <div className={styles.container}>
-        <div id={styles.logoTechs} className="flex gap-12">
+        <div id={styles.logoTechs} className="flex center gap-12">
           {generateLogos().map((logo) => {
             return (
-              <img src={logo} alt="" className="w-20 rotate-45 opacity-20" />
+              <img src={logo} alt="" className="w-20 rotate-45 opacity-[0.03]" />
             );
           })}
         </div>
-        <div id={styles.logoTechs2} className="flex gap-12">
+        <div id={styles.logoTechs2} className="flex center gap-12">
           {generateLogos().map((logo) => {
             return (
-              <img src={logo} alt="" className="w-20 rotate-45 opacity-20" />
+              <img src={logo} alt="" className="w-20 rotate-45 opacity-[0.03]" />
             );
           })}
         </div>
-        <div id={styles.logoTechs3} className="flex gap-12">
+        <div id={styles.logoTechs3} className="flex center gap-12">
           {generateLogos().map((logo) => {
             return (
-              <img src={logo} alt="" className="w-20 rotate-45 opacity-20" />
+              <img src={logo} alt="" className="w-20 rotate-45 opacity-[0.03]" />
             );
           })}
         </div>
