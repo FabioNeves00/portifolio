@@ -1,6 +1,6 @@
 import { List, ListItem } from '../../List'
-import GithubLogo from "/github-logo.svg";
-import LinkedinLogo from "/linkedin-logo.svg";
+import GithubLogo from "/techs/github-logo.svg";
+import LinkedinLogo from "/techs/linkedin-logo.svg";
 import { BASE_LINKEDIN_LINK, BASE_PERSONAL_GITHUB_LINK } from '../../../constants';
 
 export const Socials = () => {

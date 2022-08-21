@@ -13,7 +13,7 @@ export const Projects = () => {
   const [repositories, setRepositories] = useState<Repository[]>(REPOSITORIES)
 
   return (
-    <main className="flex flex-col gap-2  mt-12 w-full h-fit pb-12 ">
+    <main id="projects" className="flex flex-col gap-2  mt-12 w-full h-fit pb-12 ">
       <h1 className="title w-full gap-2 flex flex-col justify-center items-center">
         {PROJECTS_TITLE_TEXT[language]}
         <TextDivider color="light-gray" />

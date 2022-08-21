@@ -9,15 +9,16 @@ import { List, ListItem } from "../../List";
 
 type NavListProps = {
   collumn?: boolean;
+  className?: string
 };
 
-export const NavList = ({ collumn }: NavListProps) => {
+export const NavList = ({ collumn, className }: NavListProps) => {
   const { language } = useContext(LanguageContext);
 
   return (
-    <nav className={"flex items-center ml-56"}>
+    <nav className={"flex items-center ml-32 " + className}>
       <List collumn={collumn}>
-        <ListItem animate href="#tech">
+        <ListItem animate href="#techs">
           <span className="text-brand-purple">{"{"}&nbsp;</span>
           {NAV_TECH_TEXT[language]}
           <span className="text-brand-purple">&nbsp;{"};"}</span>

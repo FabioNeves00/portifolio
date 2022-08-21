@@ -6,8 +6,8 @@ import { BackgroundAnimation } from "../../BackgroundAnimation";
 export const Hero = () => {
   const { language } = useContext(LanguageContext);
   return (
-    <main className="grid grid-cols-2 grid-rows-1 h-[40rem]">
-      <div className="z-10 col-start-1 col-span-2 row-start-1 flex flex-col gap-9 justify-center">
+    <main className="grid grid-cols-2 grid-rows-1 h-screen">
+      <div className="z-[2] col-start-1 col-span-2 row-start-1 flex flex-col gap-9 justify-center">
         <h1 className="title">
           {HERO_WELCOME_TEXT[language]}
         </h1>

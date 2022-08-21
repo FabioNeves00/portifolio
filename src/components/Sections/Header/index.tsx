@@ -4,10 +4,10 @@ import { Socials } from "./Socials";
 import { Switches } from "./Switches";
 import { CloseMobileNavBar, Hamburguer } from "../../Buttons";
 import { useContext } from "react";
-import { HamburguerMenuContext } from "../../../contexts";
+import { MobileNavBarContext } from "../../../contexts";
 
 export const Header = () => {
-  const { menuState, setMenuState } = useContext(HamburguerMenuContext);
+  const { menuState, setMenuState } = useContext(MobileNavBarContext);
   return (
     <>
       <header className="dark:bg-brand-dark-blue p-6 center bg-brand-white">
@@ -20,14 +20,19 @@ export const Header = () => {
           </div>
         </div>
       </header>
-      <header className="flex md:hidden absolute right-8 top-7 z-10">
-        <div className={!menuState ? "absolute right-0" : "hidden"}>
-          <Hamburguer />
-        </div>
-        <div className={menuState ? "absolute right-0" : "hidden"}>
-          <CloseMobileNavBar />
-          <NavList collumn />
-        </div>
+      <header className="md:hidden absolute right-0 top-0 z-10">
+        {menuState ? (
+          <div className="absolute right-6 top-6">
+            <Hamburguer />
+          </div>
+        ) : (
+          <div className="w-screen h-screen flex flex-col items-end justify-center backdrop-blur-[8px] p">
+            <CloseMobileNavBar className="w-fit absolute right-6 top-6 text-3xl" />
+            <div className="w-screen h-screen center">
+              <NavList collumn className="justify-center w-screen ml-0"/>
+            </div>
+          </div>
+        )}
       </header>
     </>
   );
