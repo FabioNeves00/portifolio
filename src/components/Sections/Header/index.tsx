@@ -26,10 +26,12 @@ export const Header = () => {
             <Hamburguer />
           </div>
         ) : (
-          <div className="w-screen h-screen flex flex-col items-end justify-center backdrop-blur-[8px] p">
+          <div className="w-screen h-screen flex flex-col items-end justify-center backdrop-blur-[14px] p">
             <CloseMobileNavBar className="w-fit absolute right-6 top-6 text-3xl" />
-            <div className="w-screen h-screen center">
-              <NavList collumn className="justify-center w-screen ml-0"/>
+            <div className="w-screen h-screen center flex-col gap-12">
+              <NavList collumn className="justify-center w-screen ml-0 font-bold" />
+              <Socials />
+              <Switches />
             </div>
           </div>
         )}
