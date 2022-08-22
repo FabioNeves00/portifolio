@@ -24,6 +24,11 @@ export const ThemeContextProvider = (props: any) => {
   }, []);
 
   useEffect(() => {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setTheme((prev) => (prev = prefersDark ? "dark" : "light"));
+  }, []);
+
+  useEffect(() => {
     setSessionTheme(theme);
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
