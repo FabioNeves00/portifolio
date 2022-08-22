@@ -46,7 +46,7 @@ export const Projects = () => {
                     <Card.Tag>{stack}</Card.Tag>
                   ))}
                 </Card.TagContainer>
-                <div className="w-full center flex-col md:flex-row gap-2">
+                <div className="w-full center flex-col md:flex-row md:gap-2">
                   <Card.Button url={repo.source}>
                     Repositorio
                   </Card.Button>

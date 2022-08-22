@@ -13,7 +13,7 @@ export const Header = () => {
       <header className="dark:bg-brand-dark-blue p-6 center bg-brand-white">
         <div className="max-w-7xl w-full items-center justify-between hidden md:flex">
           <LogoBrand />
-          <NavList />
+          <NavList className=" ml-32" />
           <div className="flex gap-16">
             <Socials />
             <Switches />

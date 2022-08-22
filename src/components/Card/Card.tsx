@@ -11,7 +11,7 @@ export const Card = ({
   ...props
 }: CardProps) => {
   return (
-    <div {...props} className={"w-full h-[45rem] dark:bg-brand-black-blue bg-white drop-shadow-md rounded-xl " + className}>
+    <div {...props} className={"w-full min-h-[43rem] h-fit max-h-[42rem] flex justify-between flex-col dark:bg-brand-black-blue bg-white drop-shadow-md rounded-xl " + className}>
       {children}
     </div>
   );

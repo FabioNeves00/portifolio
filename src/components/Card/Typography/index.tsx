@@ -7,7 +7,7 @@ interface TypographyProps extends HTMLAttributes<HTMLDivElement> {
 
 export const Typography = ({children, className, ...props}: TypographyProps) => {
   return (
-    <div {...props} className={"p-2 flex flex-col gap-4 " + className}>
+    <div {...props} className={"p-2 flex flex-col gap-4 h-fit" + className}>
         {children}
       </div>
   )

@@ -16,7 +16,7 @@ export const NavList = ({ collumn, className }: NavListProps) => {
   const { language } = useContext(LanguageContext);
 
   return (
-    <nav className={"flex items-center ml-32 " + className}>
+    <nav className={"flex items-center " + className}>
       <List collumn={collumn}>
         <ListItem animate href="#techs">
           <span className="text-brand-purple">{"{"}&nbsp;</span>
