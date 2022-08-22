@@ -1,3 +1,5 @@
+import { useContext } from "react";
+
 import cssLogo from "/techs/css-3.svg";
 import nestJsLogo1 from "/techs/nestjs.svg";
 import nextJsLogo1 from "/techs/next-js.svg";
@@ -30,13 +32,20 @@ const tech_logos = [
   dockerLogo,
 ];
 
-import styles from "./style.module.css";
+import {
+  TECHS_TITLE_TEXT,
+  TECHS_DESCRIPTION_TEXT,
+} from "../../../constants";
+import { LanguageContext } from "../../../contexts";
+import { TextDivider } from "../../Dividers";
 
 export const Techs = () => {
+  const { language } = useContext(LanguageContext);
+
   const generateLogos = () => {
     const array = [];
 
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 20 ; i++) {
       array.push(
         tech_logos[Math.floor(Math.random() * (tech_logos.length - 0) + 0)]
       );
@@ -44,27 +53,35 @@ export const Techs = () => {
 
     return array;
   };
+
   return (
-    <main id="techs" className="h-screen">
-      <div className={styles.container}>
-        <div id={styles.logoTechs} className="flex center gap-12">
+    <main id="techs" className="flex flex-col gap-2  mt-12 w-full h-96 pb-12 relative">
+      <h1 className="title w-full gap-2 flex flex-col justify-center items-center z-2">
+        {TECHS_TITLE_TEXT[language]}
+        <TextDivider color="light-gray" />
+      </h1>
+      <p className="subtitle w-full text-center p-2 md:p-8 z-2">
+        {TECHS_DESCRIPTION_TEXT[language]}
+      </p>
+      <div className="flex flex-col w-full items-center	absolute gap-8 z-1 translate-x-[-120%]">
+        <div className="flex center gap-12 animate-logoTechs">
           {generateLogos().map((logo) => {
             return (
-              <img src={logo} alt="" className="w-20 rotate-45 opacity-[0.03]" />
+              <img src={logo} alt="" className="w-20 rotate-45 opacity-[0.03] grayscale" />
             );
           })}
         </div>
-        <div id={styles.logoTechs2} className="flex center gap-12">
+        <div className="flex center gap-12 animate-logoTechs2">
           {generateLogos().map((logo) => {
             return (
-              <img src={logo} alt="" className="w-20 rotate-45 opacity-[0.03]" />
+              <img src={logo} alt="" className="w-20 rotate-45 opacity-[0.03] grayscale" />
             );
           })}
         </div>
-        <div id={styles.logoTechs3} className="flex center gap-12">
+        <div className="flex center gap-12 animate-logoTechs3">
           {generateLogos().map((logo) => {
             return (
-              <img src={logo} alt="" className="w-20 rotate-45 opacity-[0.03]" />
+              <img src={logo} alt="" className="w-20 rotate-45 opacity-[0.03] grayscale" />
             );
           })}
         </div>

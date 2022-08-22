@@ -14,6 +14,17 @@ module.exports = {
         "brand-black-blue": "#020912",
         "brand-light-gray": "#9EA4A9"
       },
+      keyframes: {
+        animLogoTechs: {
+          'from': { transform: 'translateY(0px)' },
+          'to': { transform: 'translateX(240%)' },
+        }
+      },
+      animation: {
+        logoTechs: 'animLogoTechs 50s linear infinite',
+        logoTechs2: 'animLogoTechs 100s linear infinite',
+        logoTechs3: 'animLogoTechs 150s linear infinite',
+      },
     },
     screens: {
       'sm': '640px',
