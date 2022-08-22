@@ -21,12 +21,12 @@ export const Header = () => {
         </div>
       </header>
       <header className="md:hidden absolute right-0 top-0 z-10">
-        {menuState ? (
+        {!menuState ? (
           <div className="absolute right-6 top-6">
             <Hamburguer />
           </div>
         ) : (
-          <div className="w-screen h-screen flex flex-col items-end justify-center backdrop-blur-[14px] p">
+          <div className="w-screen h-screen flex flex-col items-end justify-center backdrop-blur-[14px]">
             <CloseMobileNavBar className="w-fit absolute right-6 top-6 text-3xl" />
             <div className="w-screen h-screen center flex-col gap-12">
               <NavList collumn className="justify-center w-screen ml-0 font-bold" />
