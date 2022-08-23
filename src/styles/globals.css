@@ -10,6 +10,10 @@
   scroll-behavior: smooth;
 }
 
+button:hover, a:hover {
+  filter: brightness(.6);
+}
+
 html,
 body {
   padding: 0;

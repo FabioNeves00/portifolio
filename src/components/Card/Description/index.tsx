@@ -10,10 +10,14 @@ export const Description = ({
   ...props
 }: DescriptionProps) => {
   return (
-    <div className="h-32 overflow-auto">
-      <p {...props} className={"subtitle text-center w-fit " + className}>
-        {children}
-      </p>
-    </div>
+    <p
+      {...props}
+      className={
+        "subtitle w-full h-[112px] break-words overflow-auto text-center p-3 " +
+        className
+      }
+    >
+      {children}
+    </p>
   );
 };

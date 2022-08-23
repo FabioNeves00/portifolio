@@ -25,39 +25,40 @@ export const Projects = () => {
       <p className="subtitle w-full text-center p-2 md:p-8">
         {PROJECTS_DESCRIPTION_TEXT[language]}
       </p>
-      <div>
-
-      </div>
-      <div className="w-[80%] grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
-        {repositories.map((repo) => {
-          return (
-            <Card.Card>
-              <Card.Typography>
-                <Card.Image url={repo.image!} />
-                <Card.Title>{repo.title}</Card.Title>
-                <Card.Description>
-                  {repo.description[language]}
-                </Card.Description>
-              </Card.Typography>
-              <div className="w-full center flex-col">
-                <Card.TagContainer>
-                  <Card.Tag>{repo.type}</Card.Tag>
-                  {repo.stacks.map((stack) => (
-                    <Card.Tag>{stack}</Card.Tag>
-                  ))}
-                </Card.TagContainer>
-                <div className="w-full center flex-col md:flex-row md:gap-2">
-                  <Card.Button url={repo.source}>
-                    Repositorio
-                  </Card.Button>
-                  {repo.link && (
-                    <Card.Button url={repo.link}>Pagina</Card.Button>
-                  )}
-                </div>
-              </div>
-            </Card.Card>
-          );
-        })}
+      <div></div>
+      <div className="w-[80%] flex flex-wrap gap-11 justify-center">
+        {repositories.map((repo) => (
+          <Card.Card>
+            <Card.Typography>
+              <img src={repo.image} alt={repo.title} />
+              <Card.Title>{repo.title}</Card.Title>
+              <Card.Description>{repo.description[language]}</Card.Description>
+            </Card.Typography>
+            <Card.TagContainer>
+              {repo.stacks.map((stack) => (
+                <Card.Tag>{stack}</Card.Tag>
+              ))}
+            </Card.TagContainer>
+            <div className="center">
+              <Card.Button
+                url={repo.source}
+                className={`${
+                  repo.link ? "w-1/2 rounded-bl-md" : "w-full rounded-b-md"
+                }`}
+              >
+                Git Repo
+              </Card.Button>
+              {repo.link && (
+                <div className="h-12 w-[2px] bg-brand-light-black"></div>
+              )}
+              {repo.link && (
+                <Card.Button url={repo.link} className="w-1/2 rounded-br-md">
+                  Website
+                </Card.Button>
+              )}
+            </div>
+          </Card.Card>
+        ))}
       </div>
     </main>
   );

@@ -6,7 +6,7 @@ export const DarkModeSwitch = () => {
 
   return (
     <button
-      className="w-12 h-12 bg-brand-purple rounded-full flex justify-center items-center hover:bg-opacity-60"
+      className="w-12 h-12 bg-brand-purple rounded-full flex justify-center items-center"
       onClick={toggleTheme}
       title={theme === "light" ? "LightMode" : "DarkMode"}
     >

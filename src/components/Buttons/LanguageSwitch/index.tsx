@@ -8,7 +8,7 @@ export const LanguageSwitch = () => {
 
   return (
     <button
-      className="w-12 h-12 text-2xl bg-brand-purple rounded-full flex justify-center items-center hover:bg-opacity-60"
+      className="w-12 h-12 text-2xl bg-brand-purple rounded-full flex justify-center items-center"
       title={language}
       onClick={() => setLanguage((prev) => (prev === "pt" ? "en" : "pt"))}
     >

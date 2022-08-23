@@ -16,7 +16,7 @@ export const REPOSITORIES: Repository[] = [
     },
     stacks: ["NextJS", "Typescript", "MongoDB", "Tailwind"],
     type: "Fullstack",
-    image: "./banners/StudyNotesBanner.svg",
+    image: "./banners/StudyNotesBanner.png",
   },
   {
     title: "FroggyChat",
@@ -52,7 +52,7 @@ export const REPOSITORIES: Repository[] = [
 
     stacks: ["VueJS", "NodeJS", "ExpressJS", "JWT", "Squelize"],
     type: "Frontend",
-    image: "./banners/LogoGeta.png",
+    image: "./banners/GetaBanner.png",
   },
   {
     title: "PanelinhaCLI",
@@ -63,7 +63,7 @@ export const REPOSITORIES: Repository[] = [
     },
     stacks: ["Typescript", "NodeJS"],
     type: "Backend",
-    image: "./banners/LogoPanelinha.png",
+    image: "./banners/PanelinhaBanner.png",
   },
   {
     title: "AutoDrops",
@@ -74,8 +74,7 @@ export const REPOSITORIES: Repository[] = [
     },
     stacks: ["C"],
     type: "Backend",
-    link: "https://github.com/Little-Panela/AutoDrops/blob/master/README.md",
-    image: "./banners/LogoAutoDrops.png",
+    image: "./banners/AutoDropsBanner.png",
   },
   {
     title: "PI-Plataform",

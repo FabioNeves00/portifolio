@@ -7,6 +7,6 @@ interface TagContainerProps extends HTMLAttributes<HTMLDivElement> {
 
 export const TagContainer = ({children, className, ...props}: TagContainerProps) => {
   return (
-    <div {...props} className={"flex flex-row flex-wrap gap-2 max-w-[20rem] p-2 " + className}>{children}</div>
+    <div {...props} className={"flex w-full flex-wrap gap-2 center px-8 max-h-22 overflow-auto " + className}>{children}</div>
   )
 }

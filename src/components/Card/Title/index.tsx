@@ -7,6 +7,6 @@ interface TitleProps extends HTMLAttributes<HTMLHeadingElement> {
 
 export const Title = ({children, className, ...props}: TitleProps) => {
   return (
-    <h1 {...props} className={"text-2xl md:text-3xl text-brand-light-black dark:text-brand-white font-semibold text-center " + className}>{children}</h1>
+    <h1 {...props} className={"title text-2xl text-brand-light-black dark:text-brand-white center w-full " + className}>{children}</h1>
   )
 }
