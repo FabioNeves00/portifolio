@@ -7,7 +7,7 @@ interface ImageProps extends HTMLAttributes<HTMLImageElement> {
 
 export const Image = ({url, className,...props}: ImageProps) => {
   return (
-    <div className="h-[30%] center p-2">
+    <div className="h-[30%] center">
       <img {...props} src={url} className={className}/>
     </div>
   )

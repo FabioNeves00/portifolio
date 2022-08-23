@@ -1,14 +1,18 @@
-import { HTMLAttributes, ReactNode } from "react"
+import { HTMLAttributes, ReactNode } from "react";
 
 interface TypographyProps extends HTMLAttributes<HTMLDivElement> {
-    children: ReactNode;
-    className?: string;
+  children: ReactNode;
+  className?: string;
 }
 
-export const Typography = ({children, className, ...props}: TypographyProps) => {
+export const Typography = ({
+  children,
+  className,
+  ...props
+}: TypographyProps) => {
   return (
-    <div {...props} className={"p-2 flex flex-col gap-4 h-fit" + className}>
-        {children}
-      </div>
-  )
-}
+    <div {...props} className={"flex flex-col gap-5 " + className}>
+      {children}
+    </div>
+  );
+};

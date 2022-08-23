@@ -7,6 +7,6 @@ interface TagProps extends HTMLAttributes<HTMLDivElement> {
 
 export const Tag = ({children, className, ...props}: TagProps) => {
   return (
-    <div {...props} className={"text-brand-white bg-brand-light-black rounded-full p-4 h-8 center " + className}>{children}</div>
+    <div {...props} className={"p-[0.4rem] bg-brand-light-black text-brand-white rounded-full " + className}>{children}</div>
   )
 }
