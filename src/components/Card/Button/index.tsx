@@ -12,7 +12,7 @@ export const Button = ({ url, children, className, ...props }: ButtonProps) => {
       href={url}
       {...props}
       className={
-        "center bg-brand-purple drop-shadow-lg w-36 h-12 my-12 rounded-2xl text-lg p-2 text-brand-white dark:text-brand-black-blue font-semibold hover:bg-opacity-60 " +
+        "h-12 center text-brand-white bg-brand-purple font-semibold text-lg " +
         className
       }
     >
