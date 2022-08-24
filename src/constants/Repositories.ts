@@ -8,6 +8,7 @@ export const BASE_GETA_GITHUB_LINK = "https://github.com/GETA-organization/";
 
 export const REPOSITORIES: Repository[] = [
   {
+    id: 0,
     title: "StudyNotes",
     source: BASE_PERSONAL_GITHUB_LINK + "StudyNotes",
     description: {
@@ -19,6 +20,7 @@ export const REPOSITORIES: Repository[] = [
     image: "./banners/StudyNotesBanner.png",
   },
   {
+    id: 1,
     title: "FroggyChat",
     source: BASE_PERSONAL_GITHUB_LINK + "FroggyChat",
     description: {
@@ -31,6 +33,7 @@ export const REPOSITORIES: Repository[] = [
     image: "./banners/FroggyChatBanner.png",
   },
   {
+    id: 2,
     title: "CalcResistance",
     source: BASE_PERSONAL_GITHUB_LINK + "Resistores",
     description: {
@@ -43,6 +46,8 @@ export const REPOSITORIES: Repository[] = [
     link: "https://fabioneves00.github.io/Resistores/",
   },
   {
+    id: 3,
+
     title: "Denver",
     source: BASE_GETA_GITHUB_LINK + "denver",
     description: {
@@ -55,6 +60,8 @@ export const REPOSITORIES: Repository[] = [
     image: "./banners/GetaBanner.png",
   },
   {
+    id: 4,
+
     title: "PanelinhaCLI",
     source: BASE_PANELINHA_GITHUB_LINK + "panelinha-cli",
     description: {
@@ -66,6 +73,8 @@ export const REPOSITORIES: Repository[] = [
     image: "./banners/PanelinhaBanner.png",
   },
   {
+    id: 5,
+
     title: "AutoDrops",
     source: BASE_PANELINHA_GITHUB_LINK + "AutoDrops",
     description: {
@@ -77,6 +86,8 @@ export const REPOSITORIES: Repository[] = [
     image: "./banners/AutoDropsBanner.png",
   },
   {
+    id: 6,
+
     title: "PI-Plataform",
     source: BASE_PANELINHA_GITHUB_LINK + "PI-Plataform",
     description: {
