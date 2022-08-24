@@ -14,6 +14,8 @@ import mongodbLogo from "/techs/mongodb-icon-1.svg";
 import prismaLogo from "/techs/prisma-2.svg";
 import vueJsLogo from "/techs/vue-9.svg";
 import dockerLogo from "/techs/docker-3.svg";
+import postgresLogo from "/techs/postgresql.svg";
+import javascriptLogo from "/techs/logo-javascript.svg";
 
 const tech_logos = [
   cssLogo,
@@ -30,6 +32,8 @@ const tech_logos = [
   prismaLogo,
   vueJsLogo,
   dockerLogo,
+  postgresLogo,
+  javascriptLogo
 ];
 
 import {
@@ -55,7 +59,7 @@ export const Techs = () => {
   };
 
   return (
-    <main id="techs" className="flex flex-col gap-2  mt-12 w-full h-96 pb-12 relative">
+    <main id="techs" className="flex flex-col gap-2  mt-12 w-full h-fit pb-12 relative">
       <h1 className="title w-full gap-2 flex flex-col justify-center items-center z-2">
         {TECHS_TITLE_TEXT[language]}
         <TextDivider color="light-gray" />
@@ -85,6 +89,45 @@ export const Techs = () => {
             );
           })}
         </div>
+      </div>
+      <div className="w-full flex justify-evenly md:justify-center flex-wrap mt-5 select-none">
+        <span className="text-6xl md:text-8xl text-brand-purple m-5">{'['}</span>
+        <div className="center gap-2">
+          <img src={typescriptLogo} alt="typescript" title="Typescript" className="w-16 md:w-20"/>
+          <span className="text-6xl md:text-8xl text-brand-purple mr-5">{','}</span>
+        </div>
+        <div className="center gap-2">
+          <img src={nestJsLogo1} alt="NestJS" title="NestJS" className="w-16 md:w-20"/>
+          <span className="text-6xl md:text-8xl text-brand-purple mr-5">{','}</span>
+        </div>
+        <div className="center gap-2">
+          <img src={dockerLogo} alt="Docker" title="Docker" className="w-16 md:w-20"/>
+          <span className="text-6xl md:text-8xl text-brand-purple mr-5">{','}</span>
+        </div>
+        <div className="center gap-2">
+          <img src={nodejsLogo} alt="NodeJS" title="NodeJS" className="w-16 md:w-20"/>
+          <span className="text-6xl md:text-8xl text-brand-purple mr-5">{','}</span>
+        </div>
+        <div className="center gap-2">
+          <img src={postgresLogo} alt="PostgreSQL" title="PostgreSQL" className="w-16 md:w-20"/>
+          <span className="text-6xl md:text-8xl text-brand-purple mr-5">{','}</span>
+        </div>
+        <div className="center gap-2">
+          <img src={prismaLogo} alt="Prisma" title="Prisma" className="w-16 md:w-20"/>
+          <span className="text-6xl md:text-8xl text-brand-purple mr-5">{','}</span>
+        </div>
+        <div className="center gap-2">
+          <img src={mongodbLogo} alt="MongoDB" title="MongoDB" className="w-16 md:w-20"/>
+          <span className="text-6xl md:text-8xl text-brand-purple mr-5">{','}</span>
+        </div>
+        <div className="center gap-2">
+          <img src={jwtLogo} alt="JSON Web Token" title="JSON Web Token" className="w-16 md:w-20"/>
+          <span className="text-6xl md:text-8xl text-brand-purple mr-5">{','}</span>
+        </div>
+        <div className="center gap-2">
+          <img src={redisLogo} alt="Redis" title="Redis" className="w-16 md:w-20"/>
+        </div>
+        <span className="text-6xl md:text-8xl text-brand-purple m-5">{']'}</span>
       </div>
     </main>
   );
