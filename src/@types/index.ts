@@ -1,4 +1,5 @@
 export type Repository = {
+  id: number;
   title: string;
   source: string;
   link?: string;
