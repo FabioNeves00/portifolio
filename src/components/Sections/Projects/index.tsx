@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Repository } from "../../../@types";
 import {
   PROJECTS_DESCRIPTION_TEXT,
@@ -6,13 +6,19 @@ import {
   REPOSITORIES,
 } from "../../../constants";
 import { LanguageContext } from "../../../contexts";
+import { useRepoSearch } from "../../../hooks";
 import * as Card from "../../Card";
 import { TextDivider } from "../../Dividers";
 import { SearchBar } from "../../Inputs";
 
 export const Projects = () => {
   const { language } = useContext(LanguageContext);
-  const [repositories, setRepositories] = useState<Repository[]>(REPOSITORIES);
+  const [searchResults, search] = useRepoSearch(REPOSITORIES)
+
+  useEffect(() => {
+    search('')
+  }, [])
+  
 
   return (
     <main
@@ -26,9 +32,9 @@ export const Projects = () => {
       <p className="subtitle w-full text-center p-2 md:p-8">
         {PROJECTS_DESCRIPTION_TEXT[language]}
       </p>
-      <SearchBar repositories={repositories} setRepositories={setRepositories} />
+      <SearchBar searchResults={searchResults} search={search} />
       <div className="w-[80%] flex flex-wrap gap-11 justify-center">
-        {repositories.map((repo) => (
+        {searchResults.map((repo) => (
           <Card.Card>
             <Card.Typography>
               <img src={repo.image} alt={repo.title} />
