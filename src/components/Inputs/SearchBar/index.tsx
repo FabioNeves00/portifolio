@@ -1,15 +1,7 @@
 import {
-  Dispatch,
   HTMLAttributes,
-  SetStateAction,
-  useEffect,
-  useState,
 } from "react";
-import { Repository } from "../../../@types";
-import { REPOSITORIES } from "../../../constants";
-import MiniSearch from "minisearch";
 import SearchIcon from "/icons/magnifying-glass.svg";
-import { useRepoSearch } from "../../../hooks";
 
 interface SearchBarProps extends HTMLAttributes<HTMLInputElement> {
   className?: string;
