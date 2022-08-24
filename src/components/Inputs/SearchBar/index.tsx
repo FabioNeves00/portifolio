@@ -11,7 +11,6 @@ import MiniSearch from "minisearch";
 import SearchIcon from "/icons/magnifying-glass.svg";
 
 interface SearchBarProps extends HTMLAttributes<HTMLInputElement> {
-  repositories: Repository[];
   setRepositories: Dispatch<SetStateAction<Repository[]>>;
   className?: string;
 }
