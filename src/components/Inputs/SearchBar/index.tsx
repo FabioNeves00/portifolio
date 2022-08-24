@@ -50,7 +50,7 @@ export const SearchBar = ({
 
     setRepositories(
       (prev) =>
-        (prev = filtered_repos.length === 0 ? REPOSITORIES : filtered_repos)
+        prev = filtered_repos.length === 0 ? REPOSITORIES : filtered_repos
     );
   }, [filter]);
 
