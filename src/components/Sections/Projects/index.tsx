@@ -32,7 +32,7 @@ export const Projects = () => {
       <p className="subtitle w-full text-center p-2 md:p-8">
         {PROJECTS_DESCRIPTION_TEXT[language]}
       </p>
-      <SearchBar searchResults={searchResults} search={search} />
+      <SearchBar search={search} />
       <div className="w-[80%] flex flex-wrap gap-11 justify-center">
         {searchResults.map((repo) => (
           <Card.Card>
@@ -54,7 +54,7 @@ export const Projects = () => {
                   repo.link ? "w-1/2 rounded-bl-md" : "w-full rounded-b-md"
                 }`}
               >
-                Git Repo
+                Github Repo
               </Card.Button>
               {repo.link && (
                 <div className="h-12 w-[2px] bg-brand-light-black"></div>

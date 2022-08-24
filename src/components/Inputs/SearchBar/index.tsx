@@ -13,12 +13,10 @@ import { useRepoSearch } from "../../../hooks";
 
 interface SearchBarProps extends HTMLAttributes<HTMLInputElement> {
   className?: string;
-  searchResults: Repository[];
   search: (value: string) => void;
 }
 
 export const SearchBar = ({
-  searchResults,
   search,
   className,
   ...props
