@@ -8,6 +8,7 @@ import {
 import { LanguageContext } from "../../../contexts";
 import * as Card from "../../Card";
 import { TextDivider } from "../../Dividers";
+import { SearchBar } from "../../Inputs";
 
 export const Projects = () => {
   const { language } = useContext(LanguageContext);
@@ -25,7 +26,7 @@ export const Projects = () => {
       <p className="subtitle w-full text-center p-2 md:p-8">
         {PROJECTS_DESCRIPTION_TEXT[language]}
       </p>
-      <div></div>
+      <SearchBar repositories={repositories} setRepositories={setRepositories} />
       <div className="w-[80%] flex flex-wrap gap-11 justify-center">
         {repositories.map((repo) => (
           <Card.Card>
@@ -35,6 +36,7 @@ export const Projects = () => {
               <Card.Description>{repo.description[language]}</Card.Description>
             </Card.Typography>
             <Card.TagContainer>
+                <Card.Tag>{repo.type}</Card.Tag>
               {repo.stacks.map((stack) => (
                 <Card.Tag>{stack}</Card.Tag>
               ))}
