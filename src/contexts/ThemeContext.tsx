@@ -24,8 +24,12 @@ export const ThemeContextProvider = (props: any) => {
   }, []);
 
   useEffect(() => {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setTheme((prev) => (prev = prefersDark ? "dark" : "light"));
+    if (!session_theme) {
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      setTheme((prev) => (prev = prefersDark ? "dark" : "light"));
+    }
   }, []);
 
   useEffect(() => {

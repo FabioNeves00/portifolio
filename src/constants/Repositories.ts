@@ -106,5 +106,23 @@ export const REPOSITORIES: Repository[] = [
     type: "Fullstack",
     link: "https://pi.omnicesupa.com/",
     image: "./banners/PIPlataformBanner.png",
+  },{
+    id: 7,
+
+    title: "Portifolio",
+    source: BASE_PANELINHA_GITHUB_LINK + "portifolio",
+    description: {
+      pt: "O site que você atualmente está presente, criado para introduzi-lo ao meu trabalho e minhas habilidades.",
+      en: "The website you are currently on, created to introduce you to my work and my skills.",
+    },
+    stacks: [
+      "ReactJS",
+      "Typescript",
+      "Tailwind",
+      "Vite",
+    ],
+    type: "Frontend",
+    link: "https://portifolio.fabioneves.software/",
+    image: "./banners/PortifolioBanner.png",
   },
 ];
