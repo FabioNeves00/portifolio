@@ -33,6 +33,9 @@ export const Header = () => {
               <Socials />
               <Switches />
             </div>
+            <div className="w-full center mb-4">
+              <LogoBrand />
+            </div>
           </div>
         )}
       </header>
