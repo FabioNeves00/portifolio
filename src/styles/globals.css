@@ -10,7 +10,7 @@
   scroll-behavior: smooth;
 }
 
-button:hover, a:hover {
+button:hover {
   filter: brightness(.6);
 }
 
