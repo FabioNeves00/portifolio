@@ -110,7 +110,7 @@ export const REPOSITORIES: Repository[] = [
     id: 7,
 
     title: "Portifolio",
-    source: BASE_PANELINHA_GITHUB_LINK + "portifolio",
+    source: BASE_PERSONAL_GITHUB_LINK + "portifolio",
     description: {
       pt: "O site que você atualmente está presente, criado para introduzi-lo ao meu trabalho e minhas habilidades.",
       en: "The website you are currently on, created to introduce you to my work and my skills.",
