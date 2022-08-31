@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { LanguageContext } from "../../../contexts";
+import ReactGA from "react-ga";
 import BR from "/flags/Flag_of_Brazil.svg";
 import US from "/flags/Flag_of_the_United_States.svg";
 
@@ -10,7 +11,13 @@ export const LanguageSwitch = () => {
     <button
       className="w-12 h-12 text-2xl bg-brand-purple rounded-full flex justify-center items-center"
       title={language}
-      onClick={() => setLanguage((prev) => (prev === "pt" ? "en" : "pt"))}
+      onClick={() => {
+        setLanguage((prev) => (prev === "pt" ? "en" : "pt"));
+        ReactGA.event({
+          category: "LANG",
+          action: "CHANGE_LANG",
+        });
+      }}
     >
       {language === "pt" ? (
         <img
@@ -24,7 +31,7 @@ export const LanguageSwitch = () => {
           src={US}
           alt="United States English"
           title="United States English"
-          className="min-w-7 w-7"
+          className="min-w-6 w-6"
         />
       )}
     </button>
