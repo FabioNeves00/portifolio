@@ -4,7 +4,7 @@ import { Header } from "./components";
 import { GlobalContext } from "./contexts";
 import ReactGA from 'react-ga';
 
-ReactGA.initialize(import.meta.env.TRACKING_ID)
+ReactGA.initialize(import.meta.env.VITE_TRACKING_ID)
 
 export function App() {
 
