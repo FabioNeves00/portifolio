@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { ThemeContext } from "../../../contexts";
+import ReactGA from 'react-ga';
 
 export const DarkModeSwitch = () => {
   const {theme, toggleTheme} = useContext(ThemeContext)
@@ -7,7 +8,13 @@ export const DarkModeSwitch = () => {
   return (
     <button
       className="w-12 h-12 bg-brand-purple rounded-full flex justify-center items-center"
-      onClick={toggleTheme}
+      onClick={() => {
+        toggleTheme();
+        ReactGA.event({
+          category: "THEME",
+          action: "CHANGE_THEME",
+        })
+      }}
       title={theme === "light" ? "LightMode" : "DarkMode"}
     >
       {theme === "dark" ? <Moon /> : <Sun />}
