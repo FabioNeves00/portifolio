@@ -33,13 +33,10 @@ const tech_logos = [
   vueJsLogo,
   dockerLogo,
   postgresLogo,
-  javascriptLogo
+  javascriptLogo,
 ];
 
-import {
-  TECHS_TITLE_TEXT,
-  TECHS_DESCRIPTION_TEXT,
-} from "../../../constants";
+import { TECHS_TITLE_TEXT, TECHS_DESCRIPTION_TEXT } from "../../../constants";
 import { LanguageContext } from "../../../contexts";
 import { TextDivider } from "../../Dividers";
 
@@ -49,7 +46,7 @@ export const Techs = () => {
   const generateLogos = () => {
     const array = [];
 
-    for (let i = 0; i < 20 ; i++) {
+    for (let i = 0; i < 20; i++) {
       array.push(
         tech_logos[Math.floor(Math.random() * (tech_logos.length - 0) + 0)]
       );
@@ -59,7 +56,10 @@ export const Techs = () => {
   };
 
   return (
-    <main id="techs" className="flex flex-col gap-2  mt-12 w-full h-fit pb-12 relative">
+    <main
+      id="techs"
+      className="flex flex-col gap-2  mt-12 w-full h-fit pb-12 relative"
+    >
       <h1 className="title w-full gap-2 flex flex-col justify-center items-center z-2">
         {TECHS_TITLE_TEXT[language]}
         <TextDivider color="light-gray" />
@@ -71,63 +71,128 @@ export const Techs = () => {
         <div className="flex center gap-12 animate-logoTechs">
           {generateLogos().map((logo) => {
             return (
-              <img src={logo} alt="" className="w-20 rotate-45 opacity-[0.03] grayscale" />
+              <img
+                src={logo}
+                alt=""
+                className="w-20 rotate-45 opacity-[0.03] grayscale"
+              />
             );
           })}
         </div>
         <div className="flex center gap-12 animate-logoTechs2">
           {generateLogos().map((logo) => {
             return (
-              <img src={logo} alt="" className="w-20 rotate-45 opacity-[0.03] grayscale" />
+              <img
+                src={logo}
+                alt=""
+                className="w-20 rotate-45 opacity-[0.03] grayscale"
+              />
             );
           })}
         </div>
         <div className="flex center gap-12 animate-logoTechs3">
           {generateLogos().map((logo) => {
             return (
-              <img src={logo} alt="" className="w-20 rotate-45 opacity-[0.03] grayscale" />
+              <img
+                src={logo}
+                alt=""
+                className="w-20 rotate-45 opacity-[0.03] grayscale"
+              />
             );
           })}
         </div>
       </div>
       <div className="w-full flex justify-evenly md:justify-center flex-wrap mt-5 select-none">
-        <span className="text-6xl md:text-8xl text-brand-purple m-5">{'['}</span>
         <div className="center gap-2">
-          <img src={typescriptLogo} alt="typescript" title="Typescript" className="w-16 md:w-20"/>
-          <span className="text-6xl md:text-8xl text-brand-purple mr-5">{','}</span>
+          <span className="text-6xl md:text-8xl text-brand-purple m-5">
+            {"["}
+          </span>
+          <img
+            src={typescriptLogo}
+            alt="typescript"
+            title="Typescript"
+            className="w-16 md:w-20"
+          />
+          <span className="text-6xl md:text-8xl text-brand-purple mr-5">
+            {","}
+          </span>
+          <img
+            src={nestJsLogo1}
+            alt="NestJS"
+            title="NestJS"
+            className="w-16 md:w-20"
+          />
+          <span className="text-6xl md:text-8xl text-brand-purple mr-5">
+            {","}
+          </span>
+          <img
+            src={dockerLogo}
+            alt="Docker"
+            title="Docker"
+            className="w-16 md:w-20"
+          />
+          <span className="text-6xl md:text-8xl text-brand-purple mr-5">
+            {","}
+          </span>
         </div>
         <div className="center gap-2">
-          <img src={nestJsLogo1} alt="NestJS" title="NestJS" className="w-16 md:w-20"/>
-          <span className="text-6xl md:text-8xl text-brand-purple mr-5">{','}</span>
+          <img
+            src={nodejsLogo}
+            alt="NodeJS"
+            title="NodeJS"
+            className="w-16 md:w-20"
+          />
+          <span className="text-6xl md:text-8xl text-brand-purple mr-5">
+            {","}
+          </span>
+          <img
+            src={postgresLogo}
+            alt="PostgreSQL"
+            title="PostgreSQL"
+            className="w-16 md:w-20"
+          />
+          <span className="text-6xl md:text-8xl text-brand-purple mr-5">
+            {","}
+          </span>
+          <img
+            src={prismaLogo}
+            alt="Prisma"
+            title="Prisma"
+            className="w-16 md:w-20"
+          />
+          <span className="text-6xl md:text-8xl text-brand-purple mr-5">
+            {","}
+          </span>
         </div>
         <div className="center gap-2">
-          <img src={dockerLogo} alt="Docker" title="Docker" className="w-16 md:w-20"/>
-          <span className="text-6xl md:text-8xl text-brand-purple mr-5">{','}</span>
+          <img
+            src={mongodbLogo}
+            alt="MongoDB"
+            title="MongoDB"
+            className="w-16 md:w-20"
+          />
+          <span className="text-6xl md:text-8xl text-brand-purple mr-5">
+            {","}
+          </span>
+          <img
+            src={jwtLogo}
+            alt="JSON Web Token"
+            title="JSON Web Token"
+            className="w-16 md:w-20"
+          />
+          <span className="text-6xl md:text-8xl text-brand-purple mr-5">
+            {","}
+          </span>
+          <img
+            src={redisLogo}
+            alt="Redis"
+            title="Redis"
+            className="w-16 md:w-20"
+          />
+          <span className="text-6xl md:text-8xl text-brand-purple m-5">
+            {"]"}
+          </span>
         </div>
-        <div className="center gap-2">
-          <img src={nodejsLogo} alt="NodeJS" title="NodeJS" className="w-16 md:w-20"/>
-          <span className="text-6xl md:text-8xl text-brand-purple mr-5">{','}</span>
-        </div>
-        <div className="center gap-2">
-          <img src={postgresLogo} alt="PostgreSQL" title="PostgreSQL" className="w-16 md:w-20"/>
-          <span className="text-6xl md:text-8xl text-brand-purple mr-5">{','}</span>
-        </div>
-        <div className="center gap-2">
-          <img src={prismaLogo} alt="Prisma" title="Prisma" className="w-16 md:w-20"/>
-          <span className="text-6xl md:text-8xl text-brand-purple mr-5">{','}</span>
-        </div>
-        <div className="center gap-2">
-          <img src={mongodbLogo} alt="MongoDB" title="MongoDB" className="w-16 md:w-20"/>
-          <span className="text-6xl md:text-8xl text-brand-purple mr-5">{','}</span>
-        </div>
-        <div className="center gap-2">
-          <img src={jwtLogo} alt="JSON Web Token" title="JSON Web Token" className="w-16 md:w-20"/>
-          <span className="text-6xl md:text-8xl text-brand-purple mr-5">{','}</span>
-        </div>
-        <div className="center gap-2">
-          <img src={redisLogo} alt="Redis" title="Redis" className="w-16 md:w-20"/>
-        </div>
-        <span className="text-6xl md:text-8xl text-brand-purple m-5">{']'}</span>
       </div>
     </main>
   );
